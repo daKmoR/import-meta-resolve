@@ -26,3 +26,4 @@ packages/*/yarn.lock
 dist
 _site
 stats.html
+tsconfig.tsbuildinfo

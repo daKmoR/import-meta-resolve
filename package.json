@@ -1,6 +1,6 @@
 {
   "name": "import-meta-resolve",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Resolve paths in node when using es modules (or commonjs). Ponyfill for import.meta.resolve as it is behind a flag",
   "license": "MIT",
   "author": "Thomas Allmer <d4kmor@gmail.com>",
