@@ -12,7 +12,7 @@ npm i import-meta-resolve
 
 - can be used in node using es modules & commonjs
 - resolves folders (`require.resolve` dos not support it)
-- mimics `import.meta.url` so can hopefully be replaced by it once it is no longer behind a flag
+- mimics `import.meta.resolve` so can hopefully be replaced by it once it is no longer behind a flag
 
 ## Usage
 
@@ -53,10 +53,10 @@ await importMetaResolve('@foo/bar/some-folder', __file);
 
 ## Motivation
 
-`require.resolve` enables you to resolve package files which can be useful if you need to manually load or check for files in packages.
-However when using es modules in node `require.resolve` is [not allowed](https://nodejs.org/api/esm.html).
+`require.resolve` allows you to resolve package files which can be useful if you need to manually load or check for files in packages.
+However when using es modules in node, `require.resolve` is [not allowed](https://nodejs.org/api/esm.html).
 Which means there is currently no replacement for this functionality.
-There is however an experimental api `import.meta.resolve` which you can enable via a cli flag `--experimental-import-meta-resolve`.
+There is however an experimental API `import.meta.resolve` which you can enable via a cli flag `--experimental-import-meta-resolve`.
 Experimental flags are however tough to integrate everywhere bins, other tools, ... and additionally it is tough to explain to your users that the have to do this.
 
 Because of this a transition package like this may be useful.
